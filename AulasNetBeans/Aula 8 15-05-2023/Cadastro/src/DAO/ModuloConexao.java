@@ -9,7 +9,7 @@ import java.sql.*;
 
 /**
  *
- * @author alunosenac
+ * @author M. Washington
  */
 public class ModuloConexao {
     
