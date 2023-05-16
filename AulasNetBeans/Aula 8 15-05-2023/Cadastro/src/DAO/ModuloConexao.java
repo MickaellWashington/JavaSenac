@@ -13,11 +13,13 @@ import java.sql.*;
  */
 public class ModuloConexao {
     
+//    TUDO É PADRÂO
+    
     public static Connection conectar(){
         Connection conexao;
         
         String driver = "com.mysql.cj.jdbc.Driver";
-        String url = "jdbc:mysql://locatehost:3306/Cadastro";
+        String url = "jdbc:mysql://localhost:3306/cadastro";
         String user = "root";
         String password = "";
         

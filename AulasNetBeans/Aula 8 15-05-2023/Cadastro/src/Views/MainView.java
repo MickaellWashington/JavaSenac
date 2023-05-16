@@ -35,7 +35,7 @@ public class MainView extends javax.swing.JFrame {
         menuSobre = new javax.swing.JMenu();
         menuLogin = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("YoshiTelas&Programas");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

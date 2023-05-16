@@ -5,17 +5,51 @@
  */
 package Views;
 
+import DAO.ModuloConexao;
+import java.sql.*;
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author alunosenac
+ * @author M. Washington
  */
-public class Login extends javax.swing.JFrame {
+public class Login1 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Login
-     */
-    public Login() {
+    //    PADRÂO EM TODOS
+    
+    Connection conexao = null;
+    PreparedStatement pst = null;
+    ResultSet rs = null;
+    
+public void logar(){
+    String sql = "select * from CadastroUsuario where login = ?"
+            + "and senha = ?";
+    try{
+        pst = conexao.prepareStatement(sql);
+        pst.setString(1, campoUsuario.getText());
+        pst.setString(2, campoSenha.getText());
+        rs = pst.executeQuery();
+        
+        if(rs.next()){
+            MainView cadastro = new MainView();
+            cadastro.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválido(s)");
+        }
+    }
+    catch (Exception e) {
+        JOptionPane.showMessageDialog(null,e);
+    }
+}
+    
+    public Login1() {
         initComponents();
+        conexao = ModuloConexao.conectar();
+        if (conexao != null) {
+            lblStatus.setText("Conectado");
+        } else {
+            lblStatus.setText("Não Conectado");
+        }
     }
 
     /**
@@ -27,26 +61,25 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblLogin = new javax.swing.JLabel();
         btnEntrar = new javax.swing.JButton();
         campoUsuario = new javax.swing.JTextField();
         campoSenha = new javax.swing.JPasswordField();
         txtSenha = new javax.swing.JLabel();
         txtusuario = new javax.swing.JLabel();
-        lblIcon = new javax.swing.JLabel();
-        imgFundoLogin = new javax.swing.JLabel();
+        lblStatus = new javax.swing.JLabel();
+        imgFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jLabel1.setForeground(java.awt.Color.white);
-        jLabel1.setText("LOGIN");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
+        lblLogin.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        lblLogin.setText("LOGIN");
+        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
 
-        btnEntrar.setBackground(new java.awt.Color(80, 80, 80));
+        btnEntrar.setBackground(java.awt.Color.white);
         btnEntrar.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         btnEntrar.setText("ENTRAR");
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -71,37 +104,33 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 220, 30));
 
         txtSenha.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtSenha.setForeground(java.awt.Color.black);
         txtSenha.setText("Senha:");
         getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
 
         txtusuario.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        txtusuario.setForeground(java.awt.Color.black);
         txtusuario.setText("Usuário:");
         getContentPane().add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
+        getContentPane().add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 130, 30));
 
-        lblIcon.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/img/Icon.jpg"))); // NOI18N
-        getContentPane().add(lblIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, -1, -1));
-
-        imgFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/img/Fundo.jpg"))); // NOI18N
-        getContentPane().add(imgFundoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        imgFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/img/Fundo.jpg"))); // NOI18N
+        getContentPane().add(imgFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void campoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSenhaActionPerformed
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campoSenhaActionPerformed
+        logar();
+    }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void campoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoUsuarioActionPerformed
 
-    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+    private void campoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEntrarActionPerformed
+    }//GEN-LAST:event_campoSenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,20 +149,20 @@ public class Login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Login1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                new Login1().setVisible(true);
             }
         });
     }
@@ -142,9 +171,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btnEntrar;
     private javax.swing.JPasswordField campoSenha;
     private javax.swing.JTextField campoUsuario;
-    private javax.swing.JLabel imgFundoLogin;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblIcon;
+    private javax.swing.JLabel imgFundo;
+    private javax.swing.JLabel lblLogin;
+    private javax.swing.JLabel lblStatus;
     private javax.swing.JLabel txtSenha;
     private javax.swing.JLabel txtusuario;
     // End of variables declaration//GEN-END:variables
