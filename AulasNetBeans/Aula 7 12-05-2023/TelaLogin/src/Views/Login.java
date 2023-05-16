@@ -7,7 +7,7 @@ package Views;
 
 /**
  *
- * @author alunosenac
+ * @author M. Washington
  */
 public class Login extends javax.swing.JFrame {
 

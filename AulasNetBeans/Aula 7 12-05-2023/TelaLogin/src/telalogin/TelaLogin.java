@@ -9,7 +9,7 @@ import Views.Login;
 
 /**
  *
- * @author alunosenac
+ * @author M. Washington
  */
 public class TelaLogin {
 

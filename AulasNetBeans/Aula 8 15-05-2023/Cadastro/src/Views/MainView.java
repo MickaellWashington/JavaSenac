@@ -45,7 +45,7 @@ public class MainView extends javax.swing.JFrame {
 
         menuArquivo.setText("Arquivo");
 
-        jMenuItem2.setText("jMenuItem2");
+        jMenuItem2.setText("Novo Arquivo");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
