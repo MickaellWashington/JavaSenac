@@ -33,10 +33,6 @@ public class MainView extends javax.swing.JFrame {
         desktop = new javax.swing.JDesktopPane();
         barraMenu = new javax.swing.JMenuBar();
         menuArquivo = new javax.swing.JMenu();
-        menuNovoAquivo = new javax.swing.JMenuItem();
-        menuSalvar = new javax.swing.JMenuItem();
-        menuSalvarComo = new javax.swing.JMenuItem();
-        menuAbrirArquivo = new javax.swing.JMenuItem();
         menuCadastrar = new javax.swing.JMenuItem();
         menuRelatorio = new javax.swing.JMenu();
         menuSobre = new javax.swing.JMenu();
@@ -53,37 +49,6 @@ public class MainView extends javax.swing.JFrame {
         getContentPane().add(desktop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 780));
 
         menuArquivo.setText("Arquivo");
-
-        menuNovoAquivo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        menuNovoAquivo.setText("Novo Arquivo");
-        menuNovoAquivo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuNovoAquivoActionPerformed(evt);
-            }
-        });
-        menuArquivo.add(menuNovoAquivo);
-
-        menuSalvar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
-        menuSalvar.setText("Salvar");
-        menuSalvar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuSalvarActionPerformed(evt);
-            }
-        });
-        menuArquivo.add(menuSalvar);
-
-        menuSalvarComo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        menuSalvarComo.setText("Salvar como...");
-        menuArquivo.add(menuSalvarComo);
-
-        menuAbrirArquivo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        menuAbrirArquivo.setText("Abrir Arquivo");
-        menuAbrirArquivo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuAbrirArquivoActionPerformed(evt);
-            }
-        });
-        menuArquivo.add(menuAbrirArquivo);
 
         menuCadastrar.setText("Cadastrar");
         menuCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -122,18 +87,6 @@ public class MainView extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1316, 839));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void menuNovoAquivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNovoAquivoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuNovoAquivoActionPerformed
-
-    private void menuSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSalvarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuSalvarActionPerformed
-
-    private void menuAbrirArquivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAbrirArquivoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_menuAbrirArquivoActionPerformed
 
     private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
         // TODO add your handling code here:
@@ -189,15 +142,11 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JMenuBar barraMenu;
     private javax.swing.JDesktopPane desktop;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenuItem menuAbrirArquivo;
     private javax.swing.JMenu menuArquivo;
     private javax.swing.JMenuItem menuCadastrar;
     private javax.swing.JMenu menuLogin;
-    private javax.swing.JMenuItem menuNovoAquivo;
     private javax.swing.JMenu menuRelatorio;
     private javax.swing.JMenuItem menuSair;
-    private javax.swing.JMenuItem menuSalvar;
-    private javax.swing.JMenuItem menuSalvarComo;
     private javax.swing.JMenu menuSobre;
     private javax.swing.JMenuItem menuSobre1;
     // End of variables declaration//GEN-END:variables
