@@ -115,7 +115,7 @@ public void logar(){
         getContentPane().add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, -1, -1));
 
         lblStatus.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        getContentPane().add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 750, 130, 30));
+        getContentPane().add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 730, 200, 50));
 
         setSize(new java.awt.Dimension(1316, 839));
         setLocationRelativeTo(null);

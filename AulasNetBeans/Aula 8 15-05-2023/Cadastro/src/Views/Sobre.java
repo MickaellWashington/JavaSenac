@@ -7,7 +7,7 @@ package Views;
 
 /**
  *
- * @author alunosenac
+ * @author M. Washington
  */
 public class Sobre extends javax.swing.JFrame {
 
@@ -34,17 +34,19 @@ public class Sobre extends javax.swing.JFrame {
         lblTelaFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/img/TelaTelas.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtTextoSocorro.setFont(new java.awt.Font("Times New Roman", 2, 18)); // NOI18N
         txtTextoSocorro.setText("Desisto");
-        getContentPane().add(txtTextoSocorro, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 60, 40));
+        getContentPane().add(txtTextoSocorro, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 330, 60, 40));
 
-        txtTitulo.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        txtTitulo.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         txtTitulo.setText("YoshiTelas&Programas");
-        getContentPane().add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, -1, -1));
+        getContentPane().add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, -1, -1));
 
-        pack();
+        setSize(new java.awt.Dimension(1318, 847));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

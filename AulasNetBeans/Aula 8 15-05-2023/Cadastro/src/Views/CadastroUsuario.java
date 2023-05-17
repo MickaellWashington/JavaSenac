@@ -7,7 +7,7 @@ package Views;
 
 /**
  *
- * @author alunosenac
+ * @author M. Washington
  */
 public class CadastroUsuario extends javax.swing.JFrame {
 
