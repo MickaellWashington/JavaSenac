@@ -33,6 +33,7 @@ public void logar(){
         if(rs.next()){
             MainView cadastro = new MainView();
             cadastro.setVisible(true);
+            this.dispose();
         } else {
             JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválido(s)");
         }
@@ -61,6 +62,7 @@ public void logar(){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        imgFundo = new javax.swing.JLabel();
         lblLogin = new javax.swing.JLabel();
         btnEntrar = new javax.swing.JButton();
         campoUsuario = new javax.swing.JTextField();
@@ -68,54 +70,54 @@ public void logar(){
         txtSenha = new javax.swing.JLabel();
         txtusuario = new javax.swing.JLabel();
         lblStatus = new javax.swing.JLabel();
-        imgFundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        imgFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/img/Fundo.jpg"))); // NOI18N
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Login");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblLogin.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        lblLogin.setFont(new java.awt.Font("Times New Roman", 1, 120)); // NOI18N
         lblLogin.setText("LOGIN");
-        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
+        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, -1, -1));
 
         btnEntrar.setBackground(java.awt.Color.white);
-        btnEntrar.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        btnEntrar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnEntrar.setText("ENTRAR");
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, -1, -1));
+        getContentPane().add(btnEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 530, -1, -1));
 
         campoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(campoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 220, 30));
+        getContentPane().add(campoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 550, 30));
 
         campoSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoSenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 220, 30));
+        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 440, 550, 30));
 
-        txtSenha.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        txtSenha.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         txtSenha.setText("Senha:");
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 410, -1, -1));
 
-        txtusuario.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        txtusuario.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         txtusuario.setText("Usuário:");
-        getContentPane().add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, -1, -1));
-        getContentPane().add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 130, 30));
+        getContentPane().add(txtusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, -1, -1));
 
-        imgFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/img/Fundo.jpg"))); // NOI18N
-        getContentPane().add(imgFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        lblStatus.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        getContentPane().add(lblStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 750, 130, 30));
 
-        pack();
+        setSize(new java.awt.Dimension(1316, 839));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

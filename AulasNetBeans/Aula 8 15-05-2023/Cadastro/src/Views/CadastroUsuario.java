@@ -29,17 +29,16 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        lblTelaFundo = new javax.swing.JLabel();
         txtTitulo = new javax.swing.JLabel();
         txtLogin = new javax.swing.JLabel();
         txtId = new javax.swing.JLabel();
         txtNome = new javax.swing.JLabel();
         txtSenha = new javax.swing.JLabel();
         txtPerfil = new javax.swing.JLabel();
-        txtConfirmarSenha1 = new javax.swing.JLabel();
         campoNome = new javax.swing.JTextField();
         campoId = new javax.swing.JTextField();
         campoLogin = new javax.swing.JTextField();
-        campoConfirmarSenha = new javax.swing.JPasswordField();
         campoSenha = new javax.swing.JPasswordField();
         jComboBox1 = new javax.swing.JComboBox<>();
         btnCadastrar = new javax.swing.JButton();
@@ -49,51 +48,41 @@ public class CadastroUsuario extends javax.swing.JFrame {
         btnLimpar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        lblTelaFundo = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
+
+        lblTelaFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/img/pexels-jonathan-borba-14348489.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastro");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtTitulo.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        txtTitulo.setForeground(java.awt.Color.white);
+        txtTitulo.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         txtTitulo.setText("Cadastro");
-        getContentPane().add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, -1, 30));
+        getContentPane().add(txtTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 200, 60));
 
-        txtLogin.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        txtLogin.setForeground(java.awt.Color.white);
+        txtLogin.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         txtLogin.setText("*LOGIN:");
-        getContentPane().add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+        getContentPane().add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, -1, -1));
 
-        txtId.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        txtId.setForeground(java.awt.Color.white);
+        txtId.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         txtId.setText("*ID:");
-        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 20));
+        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, -1, 20));
 
-        txtNome.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        txtNome.setForeground(java.awt.Color.white);
+        txtNome.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         txtNome.setText("*NOME:");
-        getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
+        getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, -1, -1));
 
-        txtSenha.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        txtSenha.setForeground(java.awt.Color.white);
+        txtSenha.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         txtSenha.setText("*SENHA:");
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, -1, -1));
 
-        txtPerfil.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        txtPerfil.setForeground(java.awt.Color.white);
+        txtPerfil.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         txtPerfil.setText("*PERFIL:");
-        getContentPane().add(txtPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
-
-        txtConfirmarSenha1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        txtConfirmarSenha1.setForeground(java.awt.Color.white);
-        txtConfirmarSenha1.setText("*CONFIRMAR SENHA:");
-        getContentPane().add(txtConfirmarSenha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        getContentPane().add(txtPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, -1, 30));
 
         campoNome.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         campoNome.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +90,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 campoNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 390, -1));
+        getContentPane().add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 660, 30));
 
         campoId.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         campoId.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +98,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 campoIdActionPerformed(evt);
             }
         });
-        getContentPane().add(campoId, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 390, -1));
+        getContentPane().add(campoId, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 660, 30));
 
         campoLogin.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         campoLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -117,15 +106,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 campoLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(campoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 390, -1));
-
-        campoConfirmarSenha.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        campoConfirmarSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campoConfirmarSenhaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(campoConfirmarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 390, 20));
+        getContentPane().add(campoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 660, 30));
 
         campoSenha.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         campoSenha.addActionListener(new java.awt.event.ActionListener() {
@@ -133,21 +114,21 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 campoSenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 390, 20));
+        getContentPane().add(campoSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 660, 30));
 
-        jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João", "Richarlysson", "Albert" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, -1, -1));
 
         btnCadastrar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.setBorder(null);
-        getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 70, 30));
+        getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 700, 130, 40));
 
         btnPesquisar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnPesquisar.setText("Pesquisar");
@@ -156,33 +137,29 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 btnPesquisarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 100, 30));
+        getContentPane().add(btnPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 700, 130, 40));
 
         btnAlterar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnAlterar.setText("Alterar");
-        getContentPane().add(btnAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, -1, 30));
+        getContentPane().add(btnAlterar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 700, 130, 40));
 
         btnExcluir.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnExcluir.setText("Excluir");
-        getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 330, -1, 30));
+        getContentPane().add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 700, 130, 40));
 
         btnLimpar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnLimpar.setText("Limpar");
-        getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, -1, 30));
+        getContentPane().add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 700, 130, 40));
 
         btnCancelar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
-        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, -1, 30));
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 700, 130, 40));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 8)); // NOI18N
-        jLabel1.setForeground(java.awt.Color.white);
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel1.setText("*Obrigatório");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 210, -1, 20));
 
-        lblTelaFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/img/pexels-jonathan-borba-14348489.jpg"))); // NOI18N
-        getContentPane().add(lblTelaFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        pack();
+        setSize(new java.awt.Dimension(1316, 839));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -197,10 +174,6 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private void campoLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoLoginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoLoginActionPerformed
-
-    private void campoConfirmarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoConfirmarSenhaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoConfirmarSenhaActionPerformed
 
     private void campoSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoSenhaActionPerformed
         // TODO add your handling code here:
@@ -256,7 +229,6 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnPesquisar;
-    private javax.swing.JPasswordField campoConfirmarSenha;
     private javax.swing.JTextField campoId;
     private javax.swing.JTextField campoLogin;
     private javax.swing.JTextField campoNome;
@@ -266,7 +238,6 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblTelaFundo;
-    private javax.swing.JLabel txtConfirmarSenha1;
     private javax.swing.JLabel txtId;
     private javax.swing.JLabel txtLogin;
     private javax.swing.JLabel txtNome;

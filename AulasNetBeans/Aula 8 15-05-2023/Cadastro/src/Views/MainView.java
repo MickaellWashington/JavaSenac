@@ -5,6 +5,8 @@
  */
 package Views;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author alunosenac
@@ -28,30 +30,68 @@ public class MainView extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        desktop = new javax.swing.JDesktopPane();
         barraMenu = new javax.swing.JMenuBar();
         menuArquivo = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        menuNovoAquivo = new javax.swing.JMenuItem();
+        menuSalvar = new javax.swing.JMenuItem();
+        menuSalvarComo = new javax.swing.JMenuItem();
+        menuAbrirArquivo = new javax.swing.JMenuItem();
+        menuCadastrar = new javax.swing.JMenuItem();
         menuRelatorio = new javax.swing.JMenu();
         menuSobre = new javax.swing.JMenu();
+        menuSobre1 = new javax.swing.JMenuItem();
         menuLogin = new javax.swing.JMenu();
+        menuSair = new javax.swing.JMenuItem();
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/img/Telaaaaaa.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("YoshiTelas&Programas");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/img/Telaaaaaa.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, -1, -1));
+        getContentPane().add(desktop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 780));
 
         menuArquivo.setText("Arquivo");
 
-        jMenuItem2.setText("Novo Arquivo");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        menuNovoAquivo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        menuNovoAquivo.setText("Novo Arquivo");
+        menuNovoAquivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                menuNovoAquivoActionPerformed(evt);
             }
         });
-        menuArquivo.add(jMenuItem2);
+        menuArquivo.add(menuNovoAquivo);
+
+        menuSalvar.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        menuSalvar.setText("Salvar");
+        menuSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSalvarActionPerformed(evt);
+            }
+        });
+        menuArquivo.add(menuSalvar);
+
+        menuSalvarComo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        menuSalvarComo.setText("Salvar como...");
+        menuArquivo.add(menuSalvarComo);
+
+        menuAbrirArquivo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        menuAbrirArquivo.setText("Abrir Arquivo");
+        menuAbrirArquivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuAbrirArquivoActionPerformed(evt);
+            }
+        });
+        menuArquivo.add(menuAbrirArquivo);
+
+        menuCadastrar.setText("Cadastrar");
+        menuCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCadastrarActionPerformed(evt);
+            }
+        });
+        menuArquivo.add(menuCadastrar);
 
         barraMenu.add(menuArquivo);
 
@@ -59,20 +99,56 @@ public class MainView extends javax.swing.JFrame {
         barraMenu.add(menuRelatorio);
 
         menuSobre.setText("Sobre");
+
+        menuSobre1.setText("Sobre");
+        menuSobre.add(menuSobre1);
+
         barraMenu.add(menuSobre);
 
         menuLogin.setText("Login");
+
+        menuSair.setText("Sair");
+        menuSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSairActionPerformed(evt);
+            }
+        });
+        menuLogin.add(menuSair);
+
         barraMenu.add(menuLogin);
 
         setJMenuBar(barraMenu);
 
-        pack();
+        setSize(new java.awt.Dimension(1316, 839));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void menuNovoAquivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNovoAquivoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_menuNovoAquivoActionPerformed
+
+    private void menuSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSalvarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuSalvarActionPerformed
+
+    private void menuAbrirArquivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAbrirArquivoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuAbrirArquivoActionPerformed
+
+    private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
+        // TODO add your handling code here:
+        int sair = JOptionPane.showConfirmDialog(null, "Deseja mesmo sair do Programa?","Atenção",JOptionPane.YES_NO_OPTION);
+        if(sair == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_menuSairActionPerformed
+
+    private void menuCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastrarActionPerformed
+        // TODO add your handling code here:
+        CadastroUsuario usuario = new CadastroUsuario();
+        usuario.setVisible(true);
+        desktop.add(usuario);
+    }//GEN-LAST:event_menuCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,11 +187,18 @@ public class MainView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar barraMenu;
+    private javax.swing.JDesktopPane desktop;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem menuAbrirArquivo;
     private javax.swing.JMenu menuArquivo;
+    private javax.swing.JMenuItem menuCadastrar;
     private javax.swing.JMenu menuLogin;
+    private javax.swing.JMenuItem menuNovoAquivo;
     private javax.swing.JMenu menuRelatorio;
+    private javax.swing.JMenuItem menuSair;
+    private javax.swing.JMenuItem menuSalvar;
+    private javax.swing.JMenuItem menuSalvarComo;
     private javax.swing.JMenu menuSobre;
+    private javax.swing.JMenuItem menuSobre1;
     // End of variables declaration//GEN-END:variables
 }
