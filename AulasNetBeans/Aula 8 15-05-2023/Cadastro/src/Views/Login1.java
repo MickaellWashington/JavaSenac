@@ -22,8 +22,7 @@ public class Login1 extends javax.swing.JFrame {
     ResultSet rs = null;
     
 public void logar(){
-    String sql = "select * from CadastroUsuario where login = ?"
-            + "and senha = ?";
+    String sql = "select * from CadastroUsuario where login = ? and senha = ?";
     try{
         pst = conexao.prepareStatement(sql);
         pst.setString(1, campoUsuario.getText());

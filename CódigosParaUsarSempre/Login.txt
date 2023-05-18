@@ -1,0 +1,51 @@
+Código para informar as váriaveis do método Logar().
+É colocado no public class extends.
+
+Connection conexao = null;
+PreparedStatement pst = null;
+ResultSet rs = null;
+
+Criação do método:
+
+public void logar(){
+    String sql = "select * from "nome da tabela no mySQL" where login = ? and senha = ?";
+    try{
+        pst = conexao.prepareStatement(sql);
+        pst.setString(1, campoUsuario.getText());
+        pst.setString(2, campoSenha.getText());
+        rs = pst.executeQuery();
+        
+        if(rs.next()){
+            MainView "NOME VARIAVEL"= new MainView();
+            "VARIAVEL ACIMA".setVisible(true);
+            this.dispose(); //Faz fechar a tela logo apois abrir a outra
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválido(s)");
+        }
+    }
+    catch (Exception e) {
+        JOptionPane.showMessageDialog(null,e);
+    }
+}
+
+Aqui abaixo é um método que vai exibir na tela, uma label que indica se a tela está ou não conectada com o BD. O "lblStatus" é uma label vazia criada na tela para exibir o texto caso a conexão for verdadeira ou não.
+
+public Login() {
+        initComponents();
+        conexao = ModuloConexao.conectar();
+        if (conexao != null) {
+            lblStatus.setText("Conectado");
+        } else {
+            lblStatus.setText("Não Conectado");
+        }
+    }
+
+Depois de criar uma ação para o botão entrar, colocar o método "logar()" na parte de código-fonte do action botão
+
+
+imports usados são:
+
+import DAO.ModuloConexao;
+import java.sql.*;
+import javax.swing.JOptionPane;
+

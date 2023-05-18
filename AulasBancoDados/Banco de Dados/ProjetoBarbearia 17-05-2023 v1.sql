@@ -6,7 +6,8 @@ id_pessoa int not null auto_increment primary key,
 nome varchar(45) not null,
 endereco varchar(45) not null,
 telefone varchar(20) not null,
-email varchar(45) not null
+email varchar(45) not null,
+dt_nasc date
 );
 
 create table cliente(
