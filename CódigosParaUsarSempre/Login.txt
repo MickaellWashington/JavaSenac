@@ -45,7 +45,7 @@ Depois de criar uma ação para o botão entrar, colocar o método "logar()" na 
 
 imports usados são:
 
-import DAO.ModuloConexao;
+import dao.ModuloConexao;
 import java.sql.*;
 import javax.swing.JOptionPane;
 

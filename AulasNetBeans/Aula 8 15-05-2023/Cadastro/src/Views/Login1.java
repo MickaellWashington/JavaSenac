@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class Login1 extends javax.swing.JFrame {
 
-    //    PADRÂO EM TODOS
+    //    PADRÃO EM TODOS
     
     Connection conexao = null;
     PreparedStatement pst = null;
