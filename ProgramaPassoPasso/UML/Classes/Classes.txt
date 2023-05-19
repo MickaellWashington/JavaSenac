@@ -81,7 +81,29 @@ ex:
 Classe Departamento possui uma Classe Instrutor
 
 representação UML com a seta reta com a ponta em losango vazado (-<>)
+}
 
+Composição {
+	Variação mais específico da agragação, este relacionamento indica uma dependência de um ciclo de vida forte entre as classes, de modo que quando um contêiner é destruído, seu conteúdo também é.
+
+ex:
+
+classe Janela é parte da classe BarraMenus
+
+representação UML com a seta reta com a ponta em losango pintada (-<>)
+}
+
+Generalização / Especialização {
+	Relacionamento entre itens gerais (superclasses / classes-mãe) e tipos mais específicos desses itens (subclasses / classes-filha). Representa a Herança entre as classes.
+
+Classe Animal é um tipo de Classe Peixe
+
+A classe filha herda propriedas da classe mãe, principalmente seus atributos e operações, e pode possuir seus próprios. 
+
+}
+
+Classe Associativa {
+	São produzidas quando ocorrem assosciações com multiplicidade muitos (*) em todas as extremidades. No geral, existem atributos da associação que não podem ser armazenados em nenhuma das classes envolvidas
 }
 
 
