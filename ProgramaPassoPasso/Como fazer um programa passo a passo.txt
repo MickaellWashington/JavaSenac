@@ -17,4 +17,5 @@ Como fazer um programa passo a passo:
 	4.2 Conectar com o código
 5º Telas
 	5.1 Login
+		5.1.1 adicionar o conector java na biblioteca do projeto.
 	5.2 Tela Principal
