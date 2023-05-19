@@ -5,10 +5,10 @@ Como fazer um programa passo a passo:
 	1.2 Não funcionais
 	1.3 Regras de negócio
 2º Diagramas
-	2.1 Caso de uso
-	2.2 Classe
-	2.3 Conceitual
-	2.4 Lógico
+	2.1 Caso de uso (StarUML)
+	2.2 Classe (StarUML)
+	2.3 Entidade (brmodelo)
+	2.4 Lógico (MySQL)
 3º WireFrame
 	3.1 Desenho base do programa
 	3.2 Desenho das telas (protótipo)
